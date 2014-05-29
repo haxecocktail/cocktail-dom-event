@@ -15,4 +15,4 @@ before_script:
   - mkdir report
 
 script:
-  - haxelib run munit test
+  - haxelib run munit test -neko -cpp
