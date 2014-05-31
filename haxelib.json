@@ -1,0 +1,8 @@
+{
+    "name": "cocktail-dom-event",
+    "url": "https://github.com/haxecocktail/cocktail-dom-event",
+    "licence": "MIT",
+    "version": "0.0.1",
+    "description": "Implementation of the DOM Event spec",
+    "contributors": ["Yannick Dominguez"]
+}
