@@ -6,7 +6,7 @@
  * Cocktail is available under the MIT license
  * http://www.silexlabs.org/labs/cocktail-licensing/
 */
-package cocktail.core.event;
+package cocktail.event;
 
 /**
  * The popstate event is fired in certain cases when navigating to a session history entry.

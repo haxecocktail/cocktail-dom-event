@@ -6,8 +6,7 @@
  * Cocktail is available under the MIT license
  * http://www.silexlabs.org/labs/cocktail-licensing/
 */
-package cocktail.core.event;
-import cocktail.core.html.HTMLElement;
+package cocktail.event;
 
 /**
  * The MouseEvent interface provides specific contextual information associated with Mouse events.

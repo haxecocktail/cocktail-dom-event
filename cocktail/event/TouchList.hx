@@ -6,9 +6,9 @@
  * Cocktail is available under the MIT license
  * http://www.silexlabs.org/labs/cocktail-licensing/
 */
-package cocktail.core.event;
+package cocktail.event;
 
-import cocktail.core.event.Touch;
+import cocktail.event.Touch;
 
 /**
  * This interface defines a list of individual points of contact for a 
