@@ -18,46 +18,46 @@ package cocktail.event;
  */
 class EventListener  
 {
-	/**
-	 * Wheter this event listener is triggered during the
-	 * capture phase (if true) or the bubling phase (if false)
-	 */
-	public var useCapture(default, null):Bool;
-	
-	/**
-	 * The callback to call when this event listener is triggered
-	 */
-	public var listener(default, null):Dynamic->Void;
-	
-	/**
-	 * The type of event this listener listens for
-	 */
-	public var eventType(default, null):String;
-	
-	/**
-	 * class constructor. Init
-	 * class attributes
-	 */
-	public function new(eventType:String, listener:Dynamic->Void, useCapture:Bool)
-	{
-		this.listener = listener;
-		this.useCapture = useCapture;
-		this.eventType = eventType;
-	}
-	
-	//////////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHOD
-	//////////////////////////////////////////////////////////////////////////////////////////
-	
-	/**
-	 * This method must be called whenever an event occurs of the
-	 * event type for which the EventListener interface was registered.
-	 * 
-	 * @param	evt The Event contains contextual 
-	 * information about the event.
-	 */
-	public function handleEvent(evt:Event):Void
-	{
-		listener(evt);
-	}
+    /**
+     * Wheter this event listener is triggered during the
+     * capture phase (if true) or the bubling phase (if false)
+     */
+    public var useCapture(default, null):Bool;
+    
+    /**
+     * The callback to call when this event listener is triggered
+     */
+    public var listener(default, null):Dynamic->Void;
+    
+    /**
+     * The type of event this listener listens for
+     */
+    public var eventType(default, null):String;
+    
+    /**
+     * class constructor. Init
+     * class attributes
+     */
+    public function new(eventType:String, listener:Dynamic->Void, useCapture:Bool)
+    {
+        this.listener = listener;
+        this.useCapture = useCapture;
+        this.eventType = eventType;
+    }
+    
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // PUBLIC METHOD
+    //////////////////////////////////////////////////////////////////////////////////////////
+    
+    /**
+     * This method must be called whenever an event occurs of the
+     * event type for which the EventListener interface was registered.
+     * 
+     * @param    evt The Event contains contextual 
+     * information about the event.
+     */
+    public function handleEvent(evt:Event):Void
+    {
+        listener(evt);
+    }
 }

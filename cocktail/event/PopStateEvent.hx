@@ -17,30 +17,30 @@ package cocktail.event;
  */
 class PopStateEvent extends UIEvent
 {
-	/**
-	 * the new current state
-	 */
-	public var state:Null<Dynamic>;
-	
-	public function new() 
-	{
-		super();
-	}
-	
-	/**
-	 * Initializes attributes of a PopStateEvent object. 
-	 * This method has the same behavior as UIEvent.initUIEvent(). 
-	 */
-	public function initPopStateEvent(eventTypeArg:String, canBubbleArg:Bool, cancelableArg:Bool, viewArg:Dynamic, detailArg:Float, state:Null<Dynamic>):Void
-	{
-		//can't alter event after it has been dispatched
-		if (dispatched == true)
-		{
-			return;
-		}
-		
-		initUIEvent(eventTypeArg, canBubbleArg, cancelableArg, viewArg, detailArg);
-		this.state = state;
-	}
-	
+    /**
+     * the new current state
+     */
+    public var state:Null<Dynamic>;
+    
+    public function new() 
+    {
+        super();
+    }
+    
+    /**
+     * Initializes attributes of a PopStateEvent object. 
+     * This method has the same behavior as UIEvent.initUIEvent(). 
+     */
+    public function initPopStateEvent(eventTypeArg:String, canBubbleArg:Bool, cancelableArg:Bool, viewArg:Dynamic, detailArg:Float, state:Null<Dynamic>):Void
+    {
+        //can't alter event after it has been dispatched
+        if (dispatched == true)
+        {
+            return;
+        }
+        
+        initUIEvent(eventTypeArg, canBubbleArg, cancelableArg, viewArg, detailArg);
+        this.state = state;
+    }
+    
 }

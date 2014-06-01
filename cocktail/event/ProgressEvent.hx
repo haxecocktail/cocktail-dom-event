@@ -21,52 +21,52 @@ package cocktail.event;
  */
 class ProgressEvent extends Event
 {
-	/**
-	 * Return wether the total length of the loaded
-	 * resource is known
-	 */
-	public var lengthComputable(default, null):Bool;
-	
-	/**
-	 * The current amount of loaded data
-	 */
-	public var loaded(default, null):Float;
-	
-	/**
-	 * The total size of the loaded resource
-	 */
-	public var total(default, null):Float;
-	
-	/**
-	 * class constructor
-	 */
-	public function new() 
-	{
-		super();
-		
-		lengthComputable = false;
-		loaded = 0;
-		total = 0;
-	}
-	
-	/**
-	 * Init the ProgressEvent, similar to initEvent
-	 * on Event
-	 */
-	public function initProgressEvent(eventTypeArg:String, canBubbleArg:Bool, cancelableArg:Bool, lengthComputableArg:Bool,
-	loadedArg:Float, totalArg:Float):Void
-	{
-		//can't alter event after it has been dispatched
-		if (dispatched == true)
-		{
-			return;
-		}
-		
-		initEvent(eventTypeArg, canBubbleArg, cancelableArg);
-		
-		lengthComputable = lengthComputableArg;
-		loaded = loadedArg;
-		total = totalArg;
-	}
-	
+    /**
+     * Return wether the total length of the loaded
+     * resource is known
+     */
+    public var lengthComputable(default, null):Bool;
+    
+    /**
+     * The current amount of loaded data
+     */
+    public var loaded(default, null):Float;
+    
+    /**
+     * The total size of the loaded resource
+     */
+    public var total(default, null):Float;
+    
+    /**
+     * class constructor
+     */
+    public function new() 
+    {
+        super();
+        
+        lengthComputable = false;
+        loaded = 0;
+        total = 0;
+    }
+    
+    /**
+     * Init the ProgressEvent, similar to initEvent
+     * on Event
+     */
+    public function initProgressEvent(eventTypeArg:String, canBubbleArg:Bool, cancelableArg:Bool, lengthComputableArg:Bool,
+    loadedArg:Float, totalArg:Float):Void
+    {
+        //can't alter event after it has been dispatched
+        if (dispatched == true)
+        {
+            return;
+        }
+        
+        initEvent(eventTypeArg, canBubbleArg, cancelableArg);
+        
+        lengthComputable = lengthComputableArg;
+        loaded = loadedArg;
+        total = totalArg;
+    }
+    
 }
