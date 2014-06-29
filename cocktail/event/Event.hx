@@ -117,6 +117,7 @@ class Event
         defaultPrevented = false;
         propagationStopped = false;
         immediatePropagationStopped = false;
+        eventPhase = 0;
     }
     
     //////////////////////////////////////////////////////////////////////////////////////////
