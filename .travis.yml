@@ -9,10 +9,10 @@ before_script:
   - sudo apt-get install gcc-multilib g++-multilib -y
   - mkdir ~/haxelib
   - haxelib setup ~/haxelib
+  - haxelib install buddy
+  - haxelib install utest
   - haxelib install hxcpp
-  - haxelib install munit
   - mkdir build
-  - mkdir report
 
 script:
-  - haxelib run munit test -neko -cpp
+  - make run-tests

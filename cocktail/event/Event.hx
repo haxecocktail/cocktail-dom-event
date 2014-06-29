@@ -111,7 +111,13 @@ class Event
      */
     public function new() 
     {
-        
+        dispatched = false;
+        bubbles = false;
+        cancelable = false;
+        defaultPrevented = false;
+        propagationStopped = false;
+        immediatePropagationStopped = false;
+        eventPhase = 0;
     }
     
     //////////////////////////////////////////////////////////////////////////////////////////
